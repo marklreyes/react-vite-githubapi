@@ -8,6 +8,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function GitHubUser({name, created_at, avatar_url, company, html_url, blog}) {
+  const blogUrl = 'https://' + blog;
   return (
       <Container>
         <Row>
@@ -22,7 +23,7 @@ function GitHubUser({name, created_at, avatar_url, company, html_url, blog}) {
                   {company}
                 </Card.Text>
                 <Card.Link href={html_url}>Github Profile</Card.Link>
-                <Card.Link href={blog}>My Website</Card.Link>
+                <Card.Link href={blogUrl}>My Website</Card.Link>
               </Card.Body>
             </Card>
           </Col>
